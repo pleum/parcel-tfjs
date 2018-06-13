@@ -1,0 +1,22 @@
+{
+  "name": "parcel-tfjs",
+  "version": "1.0.0",
+  "description": "A minimal TensorFlow.js boilerplate with parcel-bundler",
+  "main": "index.js",
+  "repository": "https://github.com/pleum/parcel-tfjs",
+  "author": "Pleum",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "watch": "cross-env NODE_ENV=development parcel index.html --no-hmr --open",
+    "build": "cross-env NODE_ENV=production parcel build index.html --no-minify --public-url ./",
+    "preinstall": "yarn upgrade --pattern @tensorflow"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "parcel-bundler": "^1.8.1"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^0.11.6"
+  }
+}
